@@ -1,0 +1,12 @@
+c:\users\nick\documents\visual studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.exe.config
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Form1.resources
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Properties.Resources.resources
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.csproj.GenerateResource.Cache
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.exe
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.pdb
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.exe
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.pdb
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.exe.config
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.exe
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.pdb
