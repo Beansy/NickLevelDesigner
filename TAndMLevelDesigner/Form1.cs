@@ -18,6 +18,10 @@ namespace TAndMLevelDesigner
         public int numberOfColumnsInput { get; set; }
         public int PictureBoxHeight;
         public int PictureBoxWidth;
+        public Image theseus = Image.FromFile("D:/CPIT/BCPR283/NickDesign/NickLevelDesigner/Resources/Images/Theseus.jpg");
+        public Image minotaur = Image.FromFile("D:/CPIT/BCPR283/NickDesign/NickLevelDesigner/Resources/Images/Minotaur.jpg");
+        public bool theseusPictureClicked = false;
+        public bool minotaurPictureClicked = false;
         public Map theMap;
         public MapBuilder mapBuilder;
         public Drawer drawer;
@@ -28,23 +32,27 @@ namespace TAndMLevelDesigner
             InitializeComponent();
             this.PictureBoxHeight = pictureBox1.Height;
             this.PictureBoxWidth = pictureBox1.Width;
+            this.pictureBoxTheseus.Image = this.theseus;
+            this.pictureBoxMinotaur.Image = this.minotaur;
             myMouseHandler = new MouseHandler();
+            drawer = new Drawer();
+            mapBuilder = new MapBuilder();
             
         }
         private void paintMap()
         {
-            drawer = new Drawer();
+            
             drawer.constructGrid(pictureBox1, theMap);
         }
 
         private void constructMap()
         {
-            mapBuilder = new MapBuilder();
+            
             mapBuilder.construct(this.PictureBoxHeight,this.PictureBoxWidth,  this.numberOfColumnsInput, this.numberOfRowsInput);
             this.theMap = mapBuilder.returnMap();
             this.paintMap();
             this.mapDrawn = true;
-            pictureBox1.Invalidate();
+            
         }
 
         private void pictureBox1_MouseMove_1(object sender, MouseEventArgs e)
@@ -53,7 +61,6 @@ namespace TAndMLevelDesigner
             {
                 myMouseHandler.onMouseHover(e, this.theMap);
                 this.paintMap();
-                pictureBox1.Invalidate();
             }
         }
 
@@ -70,13 +77,44 @@ namespace TAndMLevelDesigner
         {
             if (this.mapDrawn == true)
             {
-                myMouseHandler.onMouseClick(e, this.theMap);
+                myMouseHandler.onMouseClick(e, this.theMap, this.theseusPictureClicked, this.minotaurPictureClicked);
             }
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            myMouseHandler.onDoubleClick(theMap);
+            if (this.mapDrawn == true)
+            {
+                myMouseHandler.onDoubleClick(theMap);
+            }
+        }
+
+        private void pictureBoxTheseus_Click(object sender, EventArgs e)
+        {
+            if (this.theseusPictureClicked == false && this.minotaurPictureClicked == false)
+            {
+                this.theseusPictureClicked = true;
+                this.thesuesImageBackPanel.BackColor = Color.Blue;
+            }
+            else
+            {
+                this.theseusPictureClicked = false;
+                this.thesuesImageBackPanel.BackColor = Color.Empty;
+            }
+        }
+
+        private void pictureBoxMinotaur_Click(object sender, EventArgs e)
+        {
+            if (this.minotaurPictureClicked == false && this.theseusPictureClicked == false)
+            {
+                this.minotaurPictureClicked = true;
+                this.minotaurImageBackPanel.BackColor = Color.Blue;
+            }
+            else
+            {
+                this.minotaurPictureClicked = false;
+                this.minotaurImageBackPanel.BackColor = Color.Empty;
+            }
         }
  
     }

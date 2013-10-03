@@ -12,6 +12,9 @@ public class Drawer
 {
     public PictureBox thePictureBox;
     public Map theMap;
+    public Image exit = Image.FromFile("D:/CPIT/BCPR283/NickDesign/NickLevelDesigner/Resources/Images/Exit.jpg");
+    public Image theseus = Image.FromFile("D:/CPIT/BCPR283/NickDesign/NickLevelDesigner/Resources/Images/Theseus.jpg");
+    public Image minotaur = Image.FromFile("D:/CPIT/BCPR283/NickDesign/NickLevelDesigner/Resources/Images/Minotaur.jpg");
 
 	public Drawer()
 	{
@@ -58,14 +61,27 @@ public class Drawer
 
     public void drawExit(PaintEventArgs e, Cell cell)
     {
-        using (Brush myBrush = new SolidBrush(Color.Blue))
+     
+        if (cell.isExit == true)
         {
-            if (cell.isExit == true)
-            {
-                e.Graphics.FillRectangle(myBrush, cell.bottomSideStartX, cell.rightSideStartY, theMap.cellSize, theMap.cellSize);
-            }
+            e.Graphics.DrawImage(this.exit, cell.bottomSideStartX + 5, cell.rightSideStartY + 5, theMap.cellSize - 10, theMap.cellSize - 10);
+        }
+        
+    }
+
+    public void drawCharacters(PaintEventArgs e, Cell cell)
+    {
+        if (cell.containsMinotaur == true)
+        {
+            e.Graphics.DrawImage(this.minotaur, cell.bottomSideStartX + 5, cell.rightSideStartY + 5, theMap.cellSize - 10, theMap.cellSize - 10);
+        }
+
+        if (cell.containsTheseus == true)
+        {
+            e.Graphics.DrawImage(this.theseus, cell.bottomSideStartX + 5, cell.rightSideStartY + 5, theMap.cellSize - 10, theMap.cellSize - 10);
         }
     }
+
     public void paintGrid(object sender, PaintEventArgs e)
     {
         
@@ -81,6 +97,7 @@ public class Drawer
             e.Graphics.DrawLine(setPen(cell, "right"), cell.rightSideStartX, cell.rightSideStartY, cell.rightSideEndX, cell.rightSideEndY);
             e.Graphics.DrawLine(setPen(cell, "bottom"), cell.bottomSideStartX, cell.bottomSideStartY, cell.bottomSideEndX, cell.bottomSideEndY);
             this.drawExit(e, cell);
+            this.drawCharacters(e, cell);
         }
 
     }

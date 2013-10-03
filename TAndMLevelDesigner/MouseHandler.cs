@@ -14,9 +14,8 @@ public class MouseHandler
     int mouseX;
     int mouseY;
 
-    public void onMouseClick(EventArgs e, Map theMap)
+    public void setWalls(EventArgs e, Map theMap)
     {
-
         foreach (Cell cell in theMap.myCells)
         {
             if (cell.bottomSideIsHighlighted == true)
@@ -37,9 +36,39 @@ public class MouseHandler
                 {
                     cell.hasRightWall = false;
                 }
-                 
-                 
+
         }
+    }
+
+    public void addCharacters(EventArgs e, Map theMap, bool theseusHighlighted, bool minotaurHighlighted)
+    {
+        foreach (Cell cell in theMap.myCells)
+        {
+            if ((this.mouseX >= cell.bottomSideStartX && this.mouseX <= cell.bottomSideEndX) && (this.mouseY >= cell.rightSideStartY && this.mouseY <= cell.rightSideEndY))
+            {
+                if (theseusHighlighted == true)
+                {
+                    cell.containsTheseus = true;
+                }
+                
+
+                if (minotaurHighlighted == true)
+                {
+                    cell.containsMinotaur = true;
+                }
+                
+            }
+        }
+    }
+
+    public void onMouseClick(EventArgs e, Map theMap, bool theseusHighlighted, bool minotaurHighlighted)
+    {
+        this.setWalls(e, theMap);
+        if (theseusHighlighted == true || minotaurHighlighted == true)
+        {
+            this.addCharacters(e, theMap, theseusHighlighted, minotaurHighlighted);
+        }
+        
     }
 
     public void onDoubleClick(Map theMap)
@@ -64,7 +93,7 @@ public class MouseHandler
     {
         this.mouseX = e.X;
         this.mouseY = e.Y;
-        
+
         try
         {
             foreach (Cell cell in theMap.myCells)
@@ -72,7 +101,7 @@ public class MouseHandler
 
                 if ((e.X >= cell.bottomSideStartX && e.X <= cell.bottomSideEndX) && (e.Y <= cell.bottomSideStartY + forgiveness && e.Y >= cell.bottomSideStartY - forgiveness))
                 {
-                    
+
                     cell.bottomSideIsHighlighted = true;
                 }
                 else
@@ -82,7 +111,7 @@ public class MouseHandler
 
                 if ((e.Y >= cell.rightSideStartY && e.Y <= cell.rightSideEndY) && (e.X <= cell.rightSideStartX + forgiveness && e.X >= cell.rightSideStartX - forgiveness))
                 {
-                    
+
                     cell.rightSideIsHighlighted = true;
                 }
                 else
@@ -94,7 +123,7 @@ public class MouseHandler
         }
         catch (NullReferenceException)
         {
-            
+
         }
     }
 }

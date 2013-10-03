@@ -10,3 +10,8 @@ C:\Users\Nick\Documents\Visual Studio 2012\Projects\TAndMLevelDesigner\TAndMLeve
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.exe.config
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.exe
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.pdb
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.exe
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndMLevelDesigner.pdb
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Form1.resources
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Properties.Resources.resources
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.csproj.GenerateResource.Cache
