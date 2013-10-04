@@ -48,13 +48,27 @@ public class MouseHandler
             {
                 if (theseusHighlighted == true)
                 {
-                    cell.containsTheseus = true;
+                    if (cell.containsTheseus == false)
+                    {
+                        cell.containsTheseus = true;
+                    }
+                    else
+                    {
+                        cell.containsTheseus = false;
+                    }
                 }
-                
+
 
                 if (minotaurHighlighted == true)
                 {
-                    cell.containsMinotaur = true;
+                    if (cell.containsMinotaur == false)
+                    {
+                        cell.containsMinotaur = true;
+                    }
+                    else
+                    {
+                        cell.containsMinotaur = false;
+                    }
                 }
                 
             }

@@ -94,7 +94,7 @@ namespace TAndMLevelDesigner
             if (this.theseusPictureClicked == false && this.minotaurPictureClicked == false)
             {
                 this.theseusPictureClicked = true;
-                this.thesuesImageBackPanel.BackColor = Color.Blue;
+                this.thesuesImageBackPanel.BackColor = Color.Orange;
             }
             else
             {
@@ -108,7 +108,7 @@ namespace TAndMLevelDesigner
             if (this.minotaurPictureClicked == false && this.theseusPictureClicked == false)
             {
                 this.minotaurPictureClicked = true;
-                this.minotaurImageBackPanel.BackColor = Color.Blue;
+                this.minotaurImageBackPanel.BackColor = Color.Orange;
             }
             else
             {

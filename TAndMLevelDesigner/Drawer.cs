@@ -18,7 +18,7 @@ public class Drawer
 
 	public Drawer()
 	{
-        
+       
 	}
 
     public void constructGrid(PictureBox thePictureBox, Map theMap)
@@ -34,12 +34,12 @@ public class Drawer
         Pen myPen = new Pen(Brushes.Gray, 3);
         if (side == "right" && cell.rightSideIsHighlighted == true)
         {
-            myPen.Color = Color.Red;
+            myPen.Color = Color.Orange;
             myPen.Width = 6;
         }
         if (side == "bottom" && cell.bottomSideIsHighlighted == true)
         {
-            myPen.Color = Color.Red;
+            myPen.Color = Color.Orange;
             myPen.Width = 6;
         }
 

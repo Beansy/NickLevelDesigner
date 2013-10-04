@@ -15,3 +15,4 @@ D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\bin\Debug\TAndML
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Form1.resources
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.Properties.Resources.resources
 D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.csproj.GenerateResource.Cache
+D:\CPIT\BCPR283\NickDesign\NickLevelDesigner\TAndMLevelDesigner\obj\Debug\TAndMLevelDesigner.csprojResolveAssemblyReference.cache
