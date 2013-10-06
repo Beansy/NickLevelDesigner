@@ -91,8 +91,10 @@ namespace TAndMLevelDesigner
 
         private void pictureBoxTheseus_Click(object sender, EventArgs e)
         {
-            if (this.theseusPictureClicked == false && this.minotaurPictureClicked == false)
+            if (this.theseusPictureClicked == false)
             {
+                this.minotaurPictureClicked = false;
+                this.minotaurImageBackPanel.BackColor = Color.Empty;
                 this.theseusPictureClicked = true;
                 this.thesuesImageBackPanel.BackColor = Color.Orange;
             }
@@ -105,8 +107,10 @@ namespace TAndMLevelDesigner
 
         private void pictureBoxMinotaur_Click(object sender, EventArgs e)
         {
-            if (this.minotaurPictureClicked == false && this.theseusPictureClicked == false)
+            if (this.minotaurPictureClicked == false)
             {
+                this.theseusPictureClicked = false;
+                this.thesuesImageBackPanel.BackColor = Color.Empty;
                 this.minotaurPictureClicked = true;
                 this.minotaurImageBackPanel.BackColor = Color.Orange;
             }

@@ -48,26 +48,30 @@ public class MouseHandler
             {
                 if (theseusHighlighted == true)
                 {
-                    if (cell.containsTheseus == false)
+                    if (cell.containsTheseus == false && theMap.theseusPlaced == false)
                     {
                         cell.containsTheseus = true;
+                        theMap.theseusPlaced = true;
                     }
-                    else
+                    else if (cell.containsTheseus == true && theMap.theseusPlaced == true)
                     {
                         cell.containsTheseus = false;
+                        theMap.theseusPlaced = false;
                     }
                 }
 
 
                 if (minotaurHighlighted == true)
                 {
-                    if (cell.containsMinotaur == false)
+                    if (cell.containsMinotaur == false && theMap.minotaurPlaced == false)
                     {
                         cell.containsMinotaur = true;
+                        theMap.minotaurPlaced = true;
                     }
-                    else
+                    else if (cell.containsMinotaur == true && theMap.minotaurPlaced == true)
                     {
                         cell.containsMinotaur = false;
+                        theMap.minotaurPlaced = false;
                     }
                 }
                 

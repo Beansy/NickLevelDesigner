@@ -92,8 +92,10 @@ public class Drawer
         int cellSize = theMap.cellSize;
         
             // Draw grid
+        
         foreach (Cell cell in theMap.myCells)
         {
+            
             e.Graphics.DrawLine(setPen(cell, "right"), cell.rightSideStartX, cell.rightSideStartY, cell.rightSideEndX, cell.rightSideEndY);
             e.Graphics.DrawLine(setPen(cell, "bottom"), cell.bottomSideStartX, cell.bottomSideStartY, cell.bottomSideEndX, cell.bottomSideEndY);
             this.drawExit(e, cell);
